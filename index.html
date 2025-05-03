@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Concepts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CodeWithCal-W</h1>
+        <p>Let's explore interactive JavaScript concepts</p>
+    </header>
+
+    <main>
+        <section id="event-section">
+            <h2>Event Handling 🎈</h2>
+            
+            <div class="event-box">
+                <button id="click-btn" class="event-btn">Click Me!</button>
+                <p id="click-output">Button not clicked yet</p>
+            </div>
+            
+            <div class="event-box hover-box">
+                <p>Hover over me!</p>
+                <p id="hover-output">Waiting for hover...</p>
+            </div>
+            
+            <div class="event-box">
+                <p>Press any key</p>
+                <p id="keypress-output">No key pressed yet</p>
+            </div>
+            
+            <div class="event-box secret-box">
+                <p>Double click me for a secret!</p>
+                <p id="secret-output">🤫</p>
+            </div>
+        </section>
+
+        <section id="interactive-section">
+            <h2>Interactive Elements 🎮</h2>
+            
+            <div class="interactive-box color-changer">
+                <button id="color-btn">Change My Color</button>
+                <p>Click count: <span id="click-count">0</span></p>
+            </div>
+            
+            <div class="interactive-box gallery">
+                <h3>Image Gallery</h3>
+                <div class="gallery-container">
+                    <img src="https://images.pexels.com/photos/14776590/pexels-photo-14776590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image of a black sedan" class="gallery-img active" height="300px" width="300px">
+                    <img src="https://images.pexels.com/photos/164654/pexels-photo-164654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image of an orange G-Wagon" class="gallery-img" height="300px" width="300px">
+                    <img src="https://images.pexels.com/photos/1164778/pexels-photo-1164778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image of a white Volvo" class="gallery-img" height="300px" width="300px">
+                </div>
+                <div class="gallery-controls">
+                    <button id="prev-btn">Previous</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <div class="interactive-box accordion">
+                <h3>Accordion</h3>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Section 1</button>
+                    <div class="accordion-content">
+                        <p>This is the first section of content. It's hidden by default but will slide down when you click the button above.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Section 2</button>
+                    <div class="accordion-content">
+                        <p>This is the second section with more content. Accordions are great for organizing information in a compact space!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Section 3</button>
+                    <div class="accordion-content">
+                        <p>The third and final section. Notice how only one section opens at a time? That's part of the accordion magic!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-section">
+            <h2>Form Validation 📋</h2>
+            <form id="demo-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name (required)</label>
+                    <input type="text" id="name" required>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email (must be valid)</label>
+                    <input type="email" id="email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password (min 8 characters)</label>
+                    <input type="password" id="password" required minlength="8">
+                    <div class="error-message" id="password-error"></div>
+                    <div class="password-strength">
+                        <span class="strength-meter" id="strength-meter"></span>
+                        <span id="strength-text">Password strength</span>
+                    </div>
+                </div>
+                
+                <button type="submit">Submit</button>
+                <div id="form-status"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CodeWithCal-W - All rights reserved!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
